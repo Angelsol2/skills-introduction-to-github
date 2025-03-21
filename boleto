@@ -1,0 +1,116 @@
+
+package boleto;
+
+import java.util.Scanner;
+public class sona {
+      Scanner leer = new Scanner(System.in);
+    int funcion;
+    String funcion1;
+     String funcion2;
+      String funcion3;
+      int horario;
+    int hora;
+     int hora2;
+      int hora3;
+    double precio1;
+    double precio2;
+    double precio3;
+   sona(){
+       
+   }
+  
+    public double getPrecio1() {
+        return precio1;
+    }
+
+    public void setPrecio1(double precio1) {
+        this.precio1 = precio1;
+    }
+
+    public double getPrecio2() {
+        return precio2;
+    }
+
+    public void setPrecio2(double precio2) {
+        this.precio2 = precio2;
+    }
+
+    public double getPrecio3() {
+        return precio3;
+    }
+
+    public void setPrecio3(double precio3) {
+        this.precio3 = precio3;
+    }
+    
+   
+    sona(String funcion_1,String funcion_2,String funcion_3, int hora,int hora2,int hora3){
+        funcion1=funcion_1;
+           funcion2=funcion_2;
+               funcion3=funcion_3;
+               this.hora=hora;
+                this.hora2=hora2;
+                 this.hora3=hora3;
+                 
+    }
+    void peliculas(){
+        System.out.println("Las peliculas disponibles:"+"\n"+ "1."+funcion1+"\t"+"sala 8"+"\n"+hora+":00"+"\n"+hora2+":00"+"\n"+hora3+":00");
+            System.out.println("\n"+"2."+ funcion2+"\t"+"sala 15"+"\n"+hora+":00"+"\n"+hora2+":00"+"\n"+hora3+":00"+"\n");
+                System.out.println( "3."+funcion3+"\t"+"sala 25"+"\n"+hora+":00"+"\n"+hora2+":00"+"\n"+hora3+":00");
+    }
+    void opcion(){
+        System.out.println("cual funcion desea ver:");
+        funcion=leer.nextInt();
+        switch(funcion){
+            case 1:
+                System.out.println("Cual horario elige de los disponibles");
+                horario=leer.nextInt();
+                if(horario==hora){
+                    System.out.println("Sala 8"+ "\n"+ "Adulto " + "$"+precio1 + "\n" + funcion1 +": jue"+ "\n" +" funcion 30/12/2025" + hora + " pm " +" clas A" );
+                }
+                else if(horario==hora2){
+                    System.out.println("Sala 8"+ "\n"+ "Adulto " + "$"+precio2 + "\n" + funcion1 +": jue"+ "\n" +" funcion 30/12/2025" + hora2 + " pm " +" clas A" );
+                }
+                else if(horario==hora3){
+                    System.out.println("Sala 8"+ "\n"+ "Adulto " + "$"+precio3 + "\n" + funcion1 +": jue"+ "\n" +" funcion 30/12/2025" + hora3 + " pm " +" clas A" );
+        }
+                 else{
+                    System.out.println("horario no disponible");
+                }break;
+            case 2:
+                System.out.println("Cual horario elige de los disponibles");
+                horario=leer.nextInt();
+                if(horario==hora){ 
+                    System.out.println("Sala 8"+ "\n"+ "Adulto " + "$"+precio1 + "\n" + funcion2 +": jue"+ "\n" +" funcion 30/12/2025" + hora + " pm " +" clas A" );
+                }
+                else if(horario==hora2){
+                    System.out.println("Sala 8"+ "\n"+ "Adulto " + "$"+precio2 + "\n" + funcion2 +": jue"+ "\n" +" funcion 30/12/2025" + hora2 + " pm " +" clas A" );
+                }
+                else if(horario==hora3) {
+                    System.out.println("Sala 8"+ "\n"+ "Adulto " + "$"+precio3 + "\n" + funcion2 +": jue"+ "\n" +" funcion 30/12/2025" + hora3 + " pm " +" clas A" );
+        }
+                else{
+                    System.out.println("horario no disponible");
+                }
+                break;
+            case 3:
+                System.out.println("Cual horario elige de los disponibles");
+                horario=leer.nextInt();
+                if(horario==hora){
+                    System.out.println("Sala 8"+ "\n"+ "Adulto " + "$"+precio1 + "\n" + funcion3 +": jue"+ "\n" +" funcion 30/12/2025" + hora + " pm " + " clas A" );
+                }
+                else if(horario==hora2){
+                    System.out.println("Sala 8"+ "\n"+ "Adulto " + "$"+precio2 + "\n" + funcion3 +": jue"+ "\n" +" funcion 30/12/2025" + hora2 + " pm " + " clas A" );
+                }
+                else {
+                    System.out.println("Sala 8"+ "\n"+ "Adulto " + "$"+precio3 + "\n" + funcion3 +": jue"+ "\n" +" funcion 30/12/2025" + hora3 + " pm " + " clas A" );
+                    break;
+        }
+    }
+   
+    }
+
+
+    
+}   
+
