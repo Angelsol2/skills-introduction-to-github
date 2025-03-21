@@ -1,0 +1,16 @@
+package boleto;
+
+class Boleto {
+
+    public static void main(String[] args) {
+        sona r2 = new sona("Sherloch homes", "Principito", "goku",4,7,10);
+        sona r1= new sona();
+   
+    r2.setPrecio1(50.00);
+    r2.setPrecio2(63.00);
+    r2.setPrecio3(86.00);
+        r2.peliculas();
+       r2.opcion();
+    }
+
+}
