@@ -1,0 +1,34 @@
+public class Animal {
+    String nombre;
+    String Alimentacion;
+    int edad;
+    Animal(){
+}
+    Animal(String nombre,String Alimentacion,int edad){    
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getAlimentacion() {
+        return Alimentacion;
+    }
+
+    public void setAlimentacion(String Alimentacion) {
+        this.Alimentacion = Alimentacion;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    
+}
