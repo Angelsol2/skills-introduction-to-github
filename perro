@@ -1,0 +1,40 @@
+public class perro extends Animal {
+    Scanner leer= new Scanner(System.in);
+    String raza;
+
+    public perro(String raza, String nombre, String Alimentacion, int edad) {
+        super(nombre, Alimentacion, edad);
+        this.raza = raza;
+    }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+ void Mostrar(){
+     System.out.println("-------------------------------------------perro----------------------------------------------------");
+     System.out.println("Ingrese la raza del animal");
+     String se=leer.next();
+     setRaza(se);
+     System.out.println("Ingrese el nombre del animal");
+     String name=leer.next();
+     setNombre(name  );
+     System.out.println("El tipo de alimentacion:");
+     String alime=leer.next();
+     System.out.println("La edad del animal");
+     setAlimentacion(alime);
+     int ed=leer.nextInt();
+     setEdad(ed);
+     System.out.println("La raza del animal es:" + getRaza());
+     System.out.println("El nombre es: " + getNombre());
+     System.out.println("El tipo de alimentacion: "+ getAlimentacion());
+     System.out.println("La edad del animal:" + getEdad());
+     
+}
+    
+    
+    
+}
