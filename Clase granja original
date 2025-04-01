@@ -1,0 +1,23 @@
+package granja;
+
+/**
+ *
+ * @author ANGEL
+ */
+public class Granja {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       perro r1 = new perro("Chichuahua","Pedro", "Croquetas", 8);
+       gato r2= new gato("siamese", "jose", "croquetas",2);
+       caballo r3= new caballo("pony", "juan", " heno",10); 
+        // TODO code application logic here
+        r1.Mostrar();
+        r2.Mostrar();
+        r3.Mostrar();
+    }
+    
+}
+
