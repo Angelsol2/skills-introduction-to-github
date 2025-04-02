@@ -1,0 +1,49 @@
+import java.util.*;
+
+/**
+ *
+ * @author ANGEL
+ */
+public class procongelados extends datos_pri {
+
+    Scanner leer = new Scanner(System.in);
+    double temperatura;
+
+    public procongelados(double temperatura, String caducidad, String lote) {
+        super(caducidad, lote);
+        this.temperatura = temperatura;
+    }
+
+    public double getTemperatura() {
+        return temperatura;
+    }
+
+    public void setTemperatura(double temperatura) {
+        this.temperatura = temperatura;
+    }
+
+    public void mostrar() {
+        System.out.println("--------------------------------------------------------------------------congelados-------------------------------------------------------");
+        System.out.println("ingrese la caducidad del producto");
+        String cad = leer.next();
+        setCaducidad(cad);
+        System.out.println("ingrese el lote de este producto");
+        String lot;
+        do {
+            System.out.println("Tiene que ser 10 digitos");
+            lot = leer.next();
+            setLote(lot);
+
+        } while (lot.length() < 10);
+        String result = String.format("%10.10s", getLote());
+
+        System.out.println("ingrese la temperatura recompendada del producto");
+        double c = leer.nextDouble();
+        setTemperatura(c);
+
+        System.out.println("Caducidad:" + getCaducidad());
+        System.out.println("Lote: " + result);
+        System.out.println("Temperatura deseada: " + getTemperatura() + "\u00B0C");
+
+    }
+}
