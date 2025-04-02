@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author ANGEL
+ */
+public class prodrefri extends datos_pri {
+
+    Scanner leer = new Scanner(System.in);
+    String codigo;
+
+    public prodrefri(String codigo, String caducidad, String lote) {
+        super(caducidad, lote);
+        this.codigo = codigo;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    void mostrar() {
+        System.out.println("--------------------------------------------------------------------------Refrigerados-------------------------------------------------------");
+        System.out.println("ingrese la caducidad del producto");
+        String cad = leer.next();
+        setCaducidad(cad);
+
+        System.out.println("ingrese el lote de este producto");
+        String lot;
+        do {
+            System.out.println("Tiene que ser 10 digitos");
+            lot = leer.next();
+            setLote(lot);
+
+        } while (lot.length() < 10);
+        String r1 = String.format("%10.10s", getLote());
+
+        System.out.println("ingrese el codigo del producto");
+        do {
+            System.out.println("Tienen que ser 12 caracteres");
+            this.codigo = leer.next();
+            setCodigo(this.codigo);
+        } while (this.codigo.length() < 12);
+        String r2 = String.format("%10.10s", getCodigo());
+
+        System.out.println("Caducidad:" + getCaducidad());
+        System.out.println("Lote: " + r1);
+        System.out.println("codigo: " + r2);
+    }
+
+}
