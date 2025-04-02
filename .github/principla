@@ -1,0 +1,13 @@
+public class Alimentos {
+
+    public static void main(String[] args) {
+   procongelados r1 = new procongelados(42.4,"19/2", "213131");
+   prodfre r2= new prodfre("Mexico" , "botella" , "17/2/24" , "121312312312a");
+   prodrefri r3= new prodrefri ("132312312","17/2/24" , "121312312312a" );
+   r1.mostrar();
+   r2.mostrar();
+   r3.mostrar();
+   
+    }
+
+}
