@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class datos_pri {
+
+    Scanner leer = new Scanner(System.in);
+    String caducidad;
+    String lote;
+
+    datos_pri() {
+    }
+
+    datos_pri(String caducidad, String lote) {
+        this.caducidad = caducidad;
+        this.lote = lote;
+    }
+
+    public String getCaducidad() {
+        return caducidad;
+    }
+
+    public void setCaducidad(String caducidad) {
+        this.caducidad = caducidad;
+    }
+
+    public String getLote() {
+        return lote;
+    }
+
+    public void setLote(String lote) {
+        this.lote = lote;
+    }
+      
+}
