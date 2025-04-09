@@ -1,0 +1,65 @@
+ Scanner leer = new Scanner(System.in);
+    double precio;
+    Boolean temperatura;
+
+    //falso=fria, verdadero=caliente
+    Lavadora() {
+    }
+
+    public Lavadora(String marca, double potencia) {
+        super("Lavadora", marca, potencia);
+        temperatura = false;
+    }
+
+    public Lavadora(Boolean temperatura, String tipo, String marca, double potencia) {
+        super(tipo, marca, potencia);
+        this.temperatura = temperatura;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public double getPotencia() {
+        return potencia;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public Boolean getTemperatura() {
+        return temperatura;
+    }
+
+    public void setTemperatura(Boolean temperatura) {
+        this.temperatura = temperatura;
+    }
+
+    double getconsumo(int horas) {
+        if (temperatura  == false) {
+              System.out.println("Agua fria");
+            return (horas * potencia);
+          
+        } else {
+            System.out.println("Agua caliente");
+            return (horas * (potencia + potencia * 0.20));
+        }
+    }
+}
