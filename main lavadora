@@ -1,0 +1,11 @@
+     Lavadora r1=new Lavadora(false,"Lavadora", "LG", 22.4);
+        double consumo2=r1.consumo(1);
+        System.out.println(r1.getTipo());
+        System.out.println("Marca: " + r1.getMarca());
+        System.out.println("Potencia: " + r1.getPotencia());
+            System.out.println("Los kw consumidos por hora: " + consumo2);
+            System.out.println("El coste por hora: " + r1.Costoconsumo(4, 2));
+    
+    }
+    
+}
