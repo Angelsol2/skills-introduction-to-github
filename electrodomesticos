@@ -1,0 +1,49 @@
+  Scanner leer = new Scanner(System.in);
+ 
+    String tipo;
+    String marca;
+    double potencia;
+
+    Electrodomesticos() {
+    }
+
+    public Electrodomesticos(String tipo, String marca, double potencia) {
+        this.tipo = tipo;
+        this.marca = marca;
+        this.potencia = potencia;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public double getPotencia() {
+        return potencia;
+    }
+
+    public void setPotencia(double potencia) {
+        this.potencia = potencia;
+    }
+
+    double consumo(int hora) {
+        hora=leer.nextInt();
+        return (hora * potencia);
+    }
+
+    double Costoconsumo(int hora, double cosH) {
+        return (hora * cosH);
+    }
+
+}
