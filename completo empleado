@@ -1,0 +1,20 @@
+public class Empleadocompleto extends Empleados {
+    double salario_anual;
+
+    public Empleadocompleto(double salario_anual, String numero, String nombre) {
+        super(numero, nombre);
+        this.salario_anual = salario_anual;
+    }
+    Empleadocompleto(){
+    }
+
+    public double getSalario_anual() {
+        return salario_anual;
+    }
+
+    public void setSalario_anual(double salario_anual) {
+        this.salario_anual = salario_anual;
+    }
+    
+    
+}
