@@ -1,0 +1,17 @@
+public class Figura {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        cuadrado r1=new cuadrado(2);
+          circulo r2=new circulo(3);
+          System.out.println("Cuadrado");
+        r1.area();
+        r1.perimetro();
+        System.out.println("Circulo");
+        r2.area();
+        r2.perimetro();
+    }
+    
+}
