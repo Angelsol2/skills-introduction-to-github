@@ -1,0 +1,4 @@
+   EmpleadoParcial e1 = new EmpleadoParcial(150.00, "100","Arturo");
+            Empleadocompleto e2= new Empleadocompleto(10000,"100", "Arturo");
+     e1.mostrar();  
+     e2.mostrar();
