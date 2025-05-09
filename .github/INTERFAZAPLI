@@ -1,0 +1,4 @@
+  void cambioaño(int a);
+    int acelerar(int p);
+    int frenar(int p);
+    void monitor();
