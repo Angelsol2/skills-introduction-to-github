@@ -1,0 +1,20 @@
+     private String numero;
+    private String nombre;
+ public Empleados(String numero, String nombre) {
+        this.numero = numero;
+        this.nombre = nombre;
+ }
+  public Empleados() {
+    } 
+     public String getNumero() {
+        return numero;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+        }
+   void mostrar(){
