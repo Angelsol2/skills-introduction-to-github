@@ -1,0 +1,37 @@
+   int año;
+int speed;
+
+    public int getAño() {
+        return año;
+    }
+
+    public void setAño(int año) {
+        this.año = año;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public biciclita(int año, int speed) {
+        this.año = año;
+        this.speed = speed;
+    }
+
+        public void cambioaño(int a){
+        
+    }
+   public int acelerar(int p){
+           return(speed+p); 
+        }
+    public int frenar(int p){
+        return speed-p;
+    }
+    public void monitor(){
+        System.out.println("Bicicleta");
+        System.out.println("Año: " + getAño());
+        System.out.println("Speed: " + getSpeed() + "km/hora");
