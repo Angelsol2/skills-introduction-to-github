@@ -1,0 +1,24 @@
+    double pagohr;
+    public EmpleadoParcial(double pagohr, String numero, String nombre) {
+        super(numero, nombre);
+        this.pagohr = pagohr;
+        
+    }
+  public double getPagohr() {
+        return pagohr;
+    }
+
+    public void setPagohr(double pagohr) {
+        this.pagohr = pagohr;
+    }
+    public double pagosemanal(int horastrab) 
+    {
+        return (horastrab * this.pagohr);
+}
+    @Override
+    void mostrar(){
+          System.out.println("Empleado 1 ");
+        System.out.println("Numero "+getNumero());
+        System.out.println("Nombre "+getNombre());
+        System.out.println("Pago por hora "+getPagohr());
+        System.out.println("Salario de 40horas"+pagosemanal(40));
