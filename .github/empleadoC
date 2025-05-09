@@ -1,0 +1,27 @@
+  double salario_anual;
+
+    public Empleadocompleto(double salario_anual, String numero, String nombre) {
+        super(numero, nombre);
+        this.salario_anual = salario_anual;
+    }
+    Empleadocompleto(){
+    }
+
+    public double getSalario_anual() {
+        return salario_anual;
+    }
+
+    public void setSalario_anual(double salario_anual) {
+        this.salario_anual = salario_anual;
+    }
+    double calmen(){
+        return(salario_anual/12);
+    }
+    @Override
+    void mostrar(){
+         System.out.println("Empleado 2");
+        System.out.println("Numero "+getNumero());
+        System.out.println("Nombre "+getNombre());
+        System.out.println("Pago anual"+ getSalario_anual());
+        System.out.println("Salario mensual"+calmen());
+        System.out.println("----------------------------------------------------");
