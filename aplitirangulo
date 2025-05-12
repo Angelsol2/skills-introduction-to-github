@@ -1,0 +1,21 @@
+public class Aplitriangulos {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        equilatero r1 = new equilatero(25);
+        isoceles r2 = new isoceles(8, 4);
+        escaleno r3 = new escaleno(12, 7);
+        System.out.println("Equilatero");
+        System.out.println("El area es:" + r1.area());
+        System.out.println();
+            System.out.println("Isoceles");
+        System.out.println("El area es:" + r2.area());
+        System.out.println();
+        System.out.println("Escaleno");
+        System.out.println("El area es:" + r3.area());
+        // TODO code application logic here
+    }
+
+}
