@@ -1,0 +1,104 @@
+package linked;
+
+import java.util.*;
+
+/**
+ *
+ * @author Alumnos
+ */
+public class Linked {
+
+    /**
+     * @param args the command line arguments
+     */
+    static void mostrarlista(LinkedList p) {
+        int i = 0;
+        int tam = p.size();
+        alu obj;
+        while (i < tam) {
+            obj = (alu) p.get(i);
+            System.out.println(i + "\t" + obj.getClave() + "\t" + obj.getNombre() + "\t" + obj.getPromedio());
+            i++;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        LinkedList r1 = new LinkedList();
+        int cve;
+        double pro;
+        String nom;
+        int opc;
+        int pos;
+        System.out.println("teclea la clave");
+        cve = leer.nextInt();
+        while (cve != 0) {
+            System.out.println("Teclea nombre");
+            nom = leer.next();
+            System.out.println("teclea promedio");
+            pro = leer.nextDouble();
+            r1.addLast(new alu(cve, nom, pro));
+            System.out.println("Teclea la clave");
+            cve = leer.nextInt();
+        }
+        do {
+            System.out.println("1.Nuevo al principio");
+            System.out.println("2.Nuevo en determinada posicion");
+            System.out.println("3.Eliminar en determinada posicion");
+            System.out.println("4.Modificar en determinada posicion");
+            System.out.println("5.Mostrar lista");
+            System.out.println("6.Salir");
+            System.out.println("Teclea la opcion");
+            opc = leer.nextInt();
+            switch (opc) {
+
+                case 1:
+                    System.out.println("teclea la clvae");
+                    cve = leer.nextInt();
+                    System.out.println("Teclea el nombe");
+                    nom = leer.next();
+                    System.out.println("Teclea el promedio");
+                    pro = leer.nextDouble();
+                    break;
+                case 2:
+                    System.out.println("Rn que posicion");
+                    pos = leer.nextInt();
+                    System.out.println("teclea la clave");
+                    cve = leer.nextInt();
+                    System.out.println("Teclea nombre");
+                    nom = leer.next();
+                    System.out.println("teclea promedio");
+                    pro = leer.nextDouble();
+                    break;
+                case 3:
+                    System.out.println("En que pociosion");
+                    pos = leer.nextInt();
+                    alu baja;
+                    baja = (alu) r1.remove(pos);
+                    break;
+                case 4:
+                    System.out.println("En que posicion");
+                    pos = leer.nextInt();
+                    alu modi;
+                    modi = (alu) r1.get(pos);
+                    System.out.println("Teclea nombre");
+                    nom = leer.next();
+                    System.out.println("Tecla promedio");
+                    pro = leer.nextDouble();
+                    modi.setNombre(nom);
+                    modi.setPromedio(pro);
+                    break;
+                case 5:
+                    System.out.println("Listado");
+                    mostrarlista(r1);
+                    break;
+                case 6:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("No disponible");
+                    break;
+            }
+        } while (opc != 6);
+    }
+}
