@@ -1,0 +1,46 @@
+ */
+package aplicasillas;
+
+/**
+ *
+ * @author ANGEL
+ */
+public class Aplicasillas {
+  
+   static void mostrar(int cas[]){
+      
+        System.out.println("\t"+"0"+"\t"+"1"+"\t"+"2"+"\t"+"3"+"\t"+"4"+"\t"+"5"+"\t"+"6"+"\t"+"7"+"\t"+"8"+"\t"+"9"+"\t"+"10"+"\t"+"11"+"\t"+"12");
+        
+        System.out.println("\t" + cas[0] + "\t" + cas[1] + "\t" + cas[2] + "\t" + cas[3] + "\t" + cas[4] + "\t" + cas[5] + "\t" + cas[6] + "\t" + cas[7] + "\t" + cas[8] + "\t" + cas[9] + "\t" + cas[10] + "\t" + cas[11] + "\t" + cas[12]);
+System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+    }
+    public static void main(String[] args) {
+        int cas[] = {0, 2, 3, 1, 5, 7, 6, 21, 7, 11, 9, 0, 2};
+    
+  mostrar(cas);
+        cas[11]=cas[3]+cas[11];
+         mostrar(cas);
+        cas[5]=cas[1]+cas[9];
+         mostrar(cas);
+          do{
+        cas[12]=cas[12]*cas[12];
+         mostrar(cas);
+        
+         if (cas[5]==cas[10]){
+             cas[8]=cas[5]-cas[7];
+         cas[6]=cas[12]+ cas[8];
+         mostrar(cas);
+            break;
+         }
+             else{
+                  cas[12]=cas[12]-2;
+                  cas[5]=cas[5]+cas[2];          
+         }
+         }while(true);
+         
+     
+        
+        // TODO code application logic here
+  
+    }
+}
